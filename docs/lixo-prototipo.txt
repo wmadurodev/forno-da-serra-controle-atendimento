@@ -8,7 +8,7 @@ Tela 2 - Home:
 
     Esta tela mostrar a lista de todos os fluxos fluxos de atendimento ordenados por data decrescente e um botao para a criacao de um novo fluxo de atendimento.
 
-    Operacoes:
+    Operacoes da tela:
         - Clique no botao "novo fluxo": O sistema devera apresentar a tela para o cadastro do novo fluxo de atendimento (tela 3).
         - Clique em um dos fluxo de atendimento listados: Abrir a tela do fluxo de atendimento (tela 4). 
 
@@ -18,13 +18,91 @@ Tela 3 - Cadastro do Fluxo de atendimento
         - Identificador
         - Botoes Confirmar e Cancelar
 
-    Operacoes:
+    Operacoes da tela:
         - Clique no botao Confirmar: Abrir a tela de execucao do fluxo de atendiento (tela 4)
         - Clique no botao Cancelar: Ignore o cadastro e volte para a tela home (tela 2)    
 
 Tela 4 - Execucao do Fluxo de atendimento  
 
-    Esta tela devera conter os seuintes elementos
+    Esta tela devera conter os seguintes elementos:
+        - Header:
+            - Mostrara identificador do fluxo de atendimento, um botao "novo atendimento" para criacao de um "novo pedido" e um botao para "busca de pedidos".
+
+        - Visualizador de fluxo de atendimento:
+            O restante da tela devera conter um elemento visual que devera possibilitar de rolagem horizontal e que apresentara os pedidos do fluxo de atendimento em colunas de acordo como seu status. Portanto teremos os pedidos mostrados em cards dentro de suas respectivas colunas organizados pelos seguintes status:
+                - "aguardando atendimento"-
+                - "em atendimento"
+                - "em execucao"
+                - "retirado no balcao"
+                - "enviado"
+                - "entregue"
+                - "devolvido"
+            Nao existir uma coluna para mostrar os pedidos com status cancelado. Este status ira somente alterar o card do pedido confome sera deinido na definicao do elemento do card do pedido.
+
+    Operacoes da tela:
+        - Clique no botao "novo pedido": Abrir a tela de cadastro de um novo pedido (tela 5).
+        - Clique no botao "busca de pedidos": Nao implementar ainda.
+    
+    Cards de pedidos: Cada coluna do visualizador do fluxo de atendimento mostrara os cards relativos ao status dos pedidos. Seguem abaixo a definicao de como ffuncionara cada card:
+        - Card dos pedidos com status "aguardando atendimento"
+            Elementos: 
+                - Idenfificador do pedido
+                - Footer: botao para atendimento e botao para exclusao
+            Operacoes:
+                - Clique botao atendimento: Abrir tela de pedido (tela 5)
+                - Clique botao exclusao: Abrir dialog de confirmacao da exclusao do pedido e, em caso de confirmacao, excluir e atualizar a tela de visualizaca.
+
+        - Card dos pedidos com status "em atendimento"        
+            Elementos: 
+                - Idenfificador do pedido
+                - Nome do Cliente
+                - Tipo de Entrega
+                - Tipo de Pagamento
+                - Endereco
+                - Observacao
+                - Footer: botao para executar e botao para cancelar
+            Operacoes:
+                - Clique botao executar: Abrir tela de pedido (tela 6)
+                - Clique botao cancelar: Abrir dialog de confirmacao do cancelamento do pedido. (tela 7)
+
+        - Card dos pedidos com status "em execucao"        
+            Elementos: 
+                - Idenfificador do pedido
+                - Nome do Cliente
+                - Tipo de Entrega
+                - Tipo de Pagamento
+                - Endereco (so sera mostrado se o tipo de entrega for "delivery")
+                - Observacao
+                - Mesa
+                - Restricoes
+                - Imagem do pedido
+                - Footer: botoes para o tipo de entrega e botao para cancelar
+                    O botao a ser apresentado para o tipo de entrega sera definido pelo "Tipo de Entrega". Caso o tipo de entrga seja "Delivery" mosrar o Botao "Enviado", caso seja "Retirada no Balccao", mostrar o botao "Retirado"
+            Operacoes:
+                - Clique botao Retirado: Mudar o statu do pedido para "retirado no balcao" e atualizar a tela de visualizacao de atendimento
+                - Clique botao Enviado: Mudar o statu do pedido para "enviado" e atualizar a tela de visualizacao de atendimento
+                - Clique botao cancelar: Abrir dialog de confirmacao do cancelamento do pedido. (tela 7)
+
+        - Card dos pedidos com status "Retirado no Balcao"        
+            Elementos: 
+                - Idenfificador do pedido
+                - Nome do Cliente
+                - Tipo de Entrega
+                - Tipo de Pagamento
+                - Endereco
+                - Observacao
+                - Mesa
+                - Restricoes
+                - Imagem do pedido
+               
+
+Tela 5 - Cadastro de pedido
+
+Tela 6 - Execucao de pedido
+
+Tela 7 - Cancelamento de pedido
+
+
 
 
 
