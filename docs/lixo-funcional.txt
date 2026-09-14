@@ -23,7 +23,9 @@ Atributos:
     - identificador
         - Tipo do dado: texto com 20 caracteres
     - Status: 
-         - Tipo do dado: Enumeracao ("aguardando atendimento", "em atendimento", "em execucao", "retirado no balcao", "enviado", "entregue", "devolvido", "cancelado")
+         - Tipo do dado: Enumeracao ("aguardando atendimento", "em atendimento", "em execucao", "retirado no balcao", "enviado", "entregue", "devolvido")
+    - Cancelamento:
+         - Tipo do dado: boolean             
     - Nome cliente
          - Tipo do dado: texto com 50 caracteres
     - Tipo Entrega: 
