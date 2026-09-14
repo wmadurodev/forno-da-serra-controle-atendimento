@@ -1,0 +1,31 @@
+Como um UI/UX designer senior altere o documento @docs/controle-atendimento-prototype.md para especificar tecnicamente a interface da aplicacao mobile a ser desenvolvida conforme requisitos definicoes abaixo:
+
+Tela 1 - Splash: 
+
+    Devera informar ao usuario que o sistema esta sendo inicializado enquanto executa as operacoes internas para validar se existe um fluxo de atendimento aberto. Apos a verificacao, se existir um fluxo de atendimento aberto, ir para a tela do fluxo de atendimento (tela 3), caso contrario, mostrar a tela home do sistema (tela 2).
+
+Tela 2 - Home:
+
+    Esta tela mostrar a lista de todos os fluxos fluxos de atendimento ordenados por data decrescente e um botao para a criacao de um novo fluxo de atendimento.
+
+    Operacoes:
+        - Clique no botao "novo fluxo": O sistema devera apresentar a tela para o cadastro do novo fluxo de atendimento (tela 3).
+        - Clique em um dos fluxo de atendimento listados: Abrir a tela do fluxo de atendimento (tela 4). 
+
+Tela 3 - Cadastro do Fluxo de atendimento
+
+    Esta tela dvera conter os seguintes campos:
+        - Identificador
+        - Botoes Confirmar e Cancelar
+
+    Operacoes:
+        - Clique no botao Confirmar: Abrir a tela de execucao do fluxo de atendiento (tela 4)
+        - Clique no botao Cancelar: Ignore o cadastro e volte para a tela home (tela 2)    
+
+Tela 4 - Execucao do Fluxo de atendimento  
+
+    Esta tela devera conter os seuintes elementos
+
+
+
+
